@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Practical3 - Dynamic Cards</title>
+
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="nav-wrapper navbar-size">
+      <a href="#" class="brand-logo">
+        <img class="user-image-size" src="images/user-image.png" />
+      </a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a target="_blank" href="https://www.linkedin.com/">LinkedIn</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-body">
+    <div class="container center-align">
+      <h1 id="heading">Welcome to SIT 725 Week 3</h1>
+      <p class="flow-text">
+        This app generates Materialize cards dynamically using JavaScript.
+      </p>
+      <img class="materialboxed materialboxed-image" src="images/livedemo.png" alt="Live Demo Image">
+      <br>
+      <a class="waves-effect waves-light btn click-me-button" id="clickMeButton">
+        <i class="material-icons left">auto_fix_high</i>Click Me
+      </a>
+    </div>
+
+    <!-- 🔻 DYNAMIC CARD SECTION -->
+    <div class="container">
+      <div class="row" id="card-section"></div>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
