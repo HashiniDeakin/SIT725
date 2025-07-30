@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Practical4 - Dynamic + Modal</title>
+
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="custom-navbar">
+    <div class="nav-wrapper navbar-size">
+      <a href="#" class="brand-logo">
+        <img class="user-image-size" src="images/user-image.png" />
+      </a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a class="modal-trigger" href="#modal1">Cat Owners</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-body">
+    <div class="container center-align">
+      <h1>Welcome to Cat World !</h1>
+      <p class="flow-text">
+        This Website is All About CATs
+      </p>
+      <img class="materialboxed materialboxed-image" src="images/livedemo.png" alt="Live Demo">
+      <br>
+     <a class="waves-effect waves-light btn custom-click-btn" id="clickMeButton">
+      <i class="material-icons left">auto_fix_high</i> Meow Meow
+    </a>
+
+
+    </div>
+
+    <!-- Dynamic Card Section -->
+    <div class="container">
+      <div class="row" id="card-section"></div>
+    </div>
+  </main>
+
+  <!-- Image Slider Section -->
+  <div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="images/slide1.avif" alt="Slide 1">
+        <div class="caption center-align">
+          <h3>Cat Fact 1</h3>
+          <h5 class="light grey-text text-lighten-3">Cats are the most cutest.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="images/slide2.avif" alt="Slide 2">
+        <div class="caption left-align">
+          <h3>Cat Fact 2</h3>
+          <h5 class="light grey-text text-lighten-3">Cat are loyal.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="images/slide3.jpg" alt="Slide 3">
+        <div class="caption right-align">
+          <h3>Cat Fact 3</h3>
+          <h5 class="light grey-text text-lighten-3">Cats love comfy cuddles.</h5>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <form id="contact-form" class="form-padding">
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="first_name" type="text" name="first_name" required>
+            <label for="first_name">First Name</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="last_name" type="text" name="last_name" required>
+            <label for="last_name">Last Name</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="password" type="password" name="password" required>
+            <label for="password">Password</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="email" type="email" name="email" required>
+            <label for="email">Email</label>
+          </div>
+        </div>
+        <div class="row center-align">
+          <button type="submit" class="btn-small teal">SUBMIT</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="custom-footer">
+    <div class="footer-content center-align">
+      <div class="social-icons">
+        <a href="#"><i class="material-icons white-icon">facebook</i></a>
+        <a href="#"><i class="material-icons white-icon">photo_camera</i></a>
+        <a href="#"><i class="material-icons white-icon">chat</i></a>
+        <a href="#"><i class="material-icons white-icon">group</i></a>
+        <a href="#"><i class="material-icons white-icon">ondemand_video</i></a>
+      </div>
+      <ul class="footer-nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Our Team</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom center-align">
+      <p>Copyright ©2025; Designed by <span class="designer-name"> Hashini Amaya, Thennakoon Mudiyanselage </span></p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
