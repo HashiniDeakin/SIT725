@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Practical4 - Calculator with Testing</title>
+
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="nav-wrapper navbar-size">
+      <a href="#" class="brand-logo">
+        <img class="user-image-size" src="images/user-image.png" />
+      </a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a class="modal-trigger" href="#modal1">LinkedIn</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-body">
+    <div class="container center-align">
+      <h1>Simple Calculator</h1>
+      <p class="flow-text">
+        Enter two numbers to calculate their sum.
+      </p>
+      <form id="calcForm" class="row">
+        <div class="input-field col s4">
+          <input id="a" type="number" name="a" required>
+          <label for="a">Number 1</label>
+        </div>
+        <div class="input-field col s4">
+          <input id="b" type="number" name="b" required>
+          <label for="b">Number 2</label>
+        </div>
+        <div class="input-field col s4">
+          <button type="submit" class="btn waves-effect waves-light">Add</button>
+        </div>
+      </form>
+      <p id="result"></p>
+    </div>
+  </main>
+
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Contact Info</h4>
+      <p>LinkedIn Profile: [Your LinkedIn URL]</p>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      M.AutoInit();
+    });
+
+    document.getElementById('calcForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const a = document.getElementById('a').value;
+      const b = document.getElementById('b').value;
+      fetch(`/add?a=${a}&b=${b}`)
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('result').innerText = data;
+        })
+        .catch(error => {
+          document.getElementById('result').innerText = 'Error: ' + error;
+        });
+    });
+  </script>
+</body>
+</html>
