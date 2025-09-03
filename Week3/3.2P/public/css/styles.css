@@ -1,0 +1,150 @@
+.navbar-size {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.user-image-size {
+  height: 50px;
+  margin: 4px 0;
+}
+
+.main-body {
+  background-color: #06ecb3;
+  color: white;
+  min-height: calc(100vh - 64px);
+  padding-top: 40px;
+}
+
+.materialboxed-image {
+  margin: 20px auto;
+  height: 250px;
+  display: block;
+}
+
+.click-me-button {
+  background-color: #06ecb3;
+  margin-top: 30px;
+}
+
+.card-text {
+  color: black;
+}
+
+.card .card-image img {
+  height: 180px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.card {
+  margin-top: 20px;
+}
+
+.card .card-title,
+.card p {
+  text-align: center;
+}
+
+.modal {
+  border-radius: 10px;
+}
+
+.modal .modal-footer {
+  background-color: transparent;
+}
+
+/* Slider */
+.slider {
+  margin-top: 70px;
+}
+
+/* Footer */
+.custom-footer {
+  background-color: #000e55;
+  color: white;
+  padding: 30px 0 10px;
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.4);
+}
+
+.footer-content {
+  margin-bottom: 20px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  display: inline-block;
+  background: white;
+  border-radius: 50%;
+  padding: 10px;
+  color: black;
+  transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: #06ecb3;
+  color: white;
+}
+
+.white-icon {
+  font-size: 24px;
+}
+
+.footer-nav {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-nav li a {
+  color: #ccc;
+  font-size: 16px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.footer-nav li a:hover {
+  color: #06ecb3;
+}
+
+.footer-bottom {
+  background-color: #000e55;
+  padding: 10px 0;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.footer-bottom .designer-name {
+  color: white;
+  font-weight: bold;
+}
+
+/* Increase the height of the image slider */
+.slider {
+  height: 430px !important; /* You can increase to 600px, 700px etc. */
+  margin-top: 0;
+}
+
+.slider .slides li img {
+  height: 670px !important;
+  object-fit: cover;
+}
+
+.custom-click-btn {
+  background-color: #6a1b9a !important;  /* Deep purple */
+}
+.custom-click-btn:hover {
+  background-color: #8e24aa !important;
+}
+
+.custom-navbar {
+  background-color: #115e4a; /* Change to any hex or RGB color */
+}
+
+.custom-navbar .brand-logo,
+.custom-navbar ul a {
+  color: white; /* Ensure nav text is readable */
+}
